@@ -1,4 +1,4 @@
-# EnvironmentDataMeasurementSystem
+# EnvironmentDataMeasurementSystem:
 
 EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP8266 / NodeMCU to an API service to store environment data in a database using the [DHT22](https://funduino.de/anleitung-dht11-dht22) and [LM35](https://funduino.de/anleitung-temperatur-messen-lm35) sensors.
 
@@ -8,7 +8,7 @@ EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP826
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/EnvironmentDataMeasurementSystem.svg)](https://github.com/SeppPenner/EnvironmentDataMeasurementSystem/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/EnvironmentDataMeasurementSystem/master/License.txt)
 
-## What you need
+## What you need:
 * NodeMCU or ESP8266 compatible board
 * [DHT22](https://funduino.de/anleitung-dht11-dht22) sensor
 * [LM35](https://funduino.de/anleitung-temperatur-messen-lm35) sensor
@@ -17,7 +17,7 @@ EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP826
 * Some kind of server (e.g. Raspberry Pi suites that, too)
 * Some supported database fror Sails.JS: https://sailsjs.com/documentation/concepts/extending-sails/adapters/available-adapters
 
-## Installation
+## Installation:
 1. Install [Node.JS](https://nodejs.org/en/download/) properly (administrator mode on Windows) on your server.
 2. Check if the [environment variables](https://www.nextofwindows.com/windows-quick-tip-how-to-find-out-all-my-environment-variables) are set properly. (See image below for more information)
 
@@ -133,7 +133,7 @@ swagger project start
 ## Additional information:
 The Dockerfile for the service didn't work on my Raspberry Pi. Cou can give it a try but don't be sad if it doesn't do what expected.
 
-### Generate self signed ssl files (openssl needs to be installed)
+### Generate self signed ssl files (openssl needs to be installed):
 
 ```bash
 export SERVER_NAME='localhost'
@@ -144,7 +144,19 @@ openssl req -nodes -x509 -newkey rsa:2048 \
   -keyout ssl/default.key \
   -out ssl/default.crt
 ```
-  
+
+### Updating dependencies:
+Remove the environmentsystem/package-lock.json
+
+Go to the environmentsystem folder (e.g. cd environmentsystem)
+	
+Update via npm (In Windows use Powershell as Administrator):
+```bash
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+```
+
 Change history
 --------------
 * **Version 1.0.0.0 (2018-04-13)** : Initial version.

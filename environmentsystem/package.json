@@ -24,9 +24,9 @@
     "http-auth": "^3.2.3",
     "include-all": "~4.0.3",
     "rc": "~1.2.5",
-    "sails": "~0.12.14",
-    "sails-disk": "~0.10.0",
-    "sails-mysql": "^0.11.5",
+    "sails": "~1.0.1",
+    "sails-disk": "~1.0.1",
+    "sails-mysql": "^1.0.0",
     "swagger-sails-hook": "^0.7.0",
     "validator": "^9.4.1",
     "winston": "^2.4.0"
