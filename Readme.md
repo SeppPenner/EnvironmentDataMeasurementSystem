@@ -34,7 +34,7 @@ EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP826
 	url: "https://111.111.111.111:10011/swagger",
 	```
 	* In the config/ssl subfolder add your ssl files (I've put dummy ones in there):
-	For generation of the files referr to https://github.com/SeppPenner/HowToCreateASailsJsApplicationWithSwagger#adding-ssl
+	For generation of the files refer to https://github.com/SeppPenner/EnvironmentDataMeasurementSystem#generate-self-signed-ssl-files-openssl-needs-to-be-installed
 	* In the config/session.js file update your session secret (Let's assume 41e2608f92f8701a99c41e2608f05885):
 	```javascript
 	secret: '41e2608f92f8701a99c41e2608f05885',
@@ -147,4 +147,4 @@ openssl req -nodes -x509 -newkey rsa:2048 \
   
 Change history
 --------------
-* **Version 1.0.0.0 (2018-04-13)** : Added SSL support example.
+* **Version 1.0.0.0 (2018-04-13)** : Initial version.
