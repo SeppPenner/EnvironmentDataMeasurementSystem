@@ -1,0 +1,147 @@
+swagger: "2.0"
+info:
+  version: "1.0.0.0"
+  title: Environment system
+# during dev, should point to your local machine
+host: 111.111.111.111:10011
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+  - multipart/form-data
+  - application/xml
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /api/environment/create/:
+    x-swagger-router-controller: EnvironmentData
+    post:
+      description: Creates new environment data
+      operationId: createEnvironmentData
+      parameters:
+        - name: humidity
+          in: query
+          description: The current humidity
+          required: true
+          type: number
+        - name: temperature
+          in: query
+          description: The current temperature
+          required: true
+          type: number
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/EnvironmentDataResponse"
+        "400":
+          description: Bad request
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "404":
+          description: Not found
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "500":
+          description: Internal server error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /api/environment/read/{dateFrom}/{dateTo}/:
+    x-swagger-router-controller: EnvironmentData
+    get:
+      description: Reads environment data in the given date range
+      operationId: readEnvironmentDataByInDateRange
+      parameters:
+        - name: dateFrom
+          in: path
+          description: The from date
+          required: true
+          type: string
+          format: date
+        - name: dateTo
+          in: path
+          description: The to date
+          required: true
+          type: string
+          format: date
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/EnvironmentDataResponse"
+        "400":
+          description: Bad request
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "404":
+          description: Not found
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "500":
+          description: Internal server error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /api/environment/readAll/:
+    x-swagger-router-controller: EnvironmentData
+    get:
+      description: Reads all environment data
+      operationId: readAllEnvironmentData
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/EnvironmentDataResponse"
+        "404":
+          description: Not found
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "500":
+          description: Internal server error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  EnvironmentDataResponse:
+    required:
+      - id
+      - createdAt
+      - humidity
+      - temperature
+    properties:
+      id:
+        type: string
+      createdAt:
+        type: string
+        format: date
+      humidity:
+        type: number
+      temperature:
+        type: number
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
