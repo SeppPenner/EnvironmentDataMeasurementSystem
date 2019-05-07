@@ -5,4 +5,4 @@ ignore: {}
 patch:
   'npm:lodash:20180130':
     - sails > sort-route-addresses > lodash:
-        patched: '2019-05-07T05:33:51.628Z'
+        patched: '2019-05-07T05:33:52.710Z'
