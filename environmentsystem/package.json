@@ -24,12 +24,13 @@
     "http-auth": "^3.2.3",
     "include-all": "~4.0.3",
     "rc": "~1.2.5",
-    "sails": "~1.0.1",
+    "sails": "~1.2.1",
     "sails-disk": "~1.0.1",
     "sails-mysql": "^1.0.0",
     "swagger-sails-hook": "^0.7.0",
     "validator": "^9.4.1",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "should": "^13.2.1",
@@ -38,6 +39,9 @@
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js",
-    "test": "swagger project test"
-  }
+    "test": "swagger project test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
