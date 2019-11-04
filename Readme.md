@@ -6,7 +6,7 @@ EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP826
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/EnvironmentDataMeasurementSystem.svg)](https://github.com/SeppPenner/EnvironmentDataMeasurementSystem/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/EnvironmentDataMeasurementSystem.svg)](https://github.com/SeppPenner/EnvironmentDataMeasurementSystem/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/EnvironmentDataMeasurementSystem.svg)](https://github.com/SeppPenner/EnvironmentDataMeasurementSystem/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/EnvironmentDataMeasurementSystem/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/EnvironmentDataMeasurementSystem/master/License.txt)
 
 ## What you need:
 * NodeMCU or ESP8266 compatible board
