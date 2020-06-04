@@ -1,4 +1,4 @@
-# EnvironmentDataMeasurementSystem:
+# EnvironmentDataMeasurementSystem
 
 EnvironmentDataMeasurementSystem is a project that shows how to connect a ESP8266 / NodeMCU to an API service to store environment data in a database using the [DHT22](https://funduino.de/anleitung-dht11-dht22) and [LM35](https://funduino.de/anleitung-temperatur-messen-lm35) sensors.
 
@@ -159,4 +159,5 @@ npm install
 
 Change history
 --------------
-* **Version 1.0.0.0 (2018-04-13)** : Initial version.
+
+See the [Changelog](https://github.com/SeppPenner/EnvironmentDataMeasurementSystem/blob/master/Changelog.md).
