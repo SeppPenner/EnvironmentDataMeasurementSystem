@@ -28,7 +28,7 @@
     "sails-disk": "~1.0.1",
     "sails-mysql": "^1.0.0",
     "swagger-sails-hook": "^0.7.0",
-    "validator": "^9.4.1",
+    "validator": "^13.7.0",
     "winston": "^2.4.0",
     "snyk": "^1.161.1"
   },
